@@ -1,0 +1,4011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RanKING! Panel</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="shortcut icon" type="x-icon" href="images/RanKING - Vivid.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <div class="dashboard-container">
+    <div class="sidebar-top">
+      <span class="shrink-btn">
+        <i class='bx bx-chevron-left'></i>
+      </span>
+      <span onclick="reloadPage()">
+      <img src="images/RanKING - Concept.png" class="logo" alt="">
+    </span>
+      <h3 class="hide">RanKING!</h3>
+    </div>
+    
+    <div class="search">
+      <i class='bx bx-search-alt'></i>
+      <input type="text" class="hide" placeholder="Búsqueda Rápida ...">
+    </div>
+    <div class="sidebar-links active">
+        <h4 class="hide">Aulas de Tercero</h4>
+      <ul>
+        <div class="active-tab"></div>
+        <li class="tooltip-element" data-tooltip="0">
+          <a href="#" data-active="0">
+            <div class="icon">
+              <i class='bx bx-paint'></i>
+              <i class='bx bxs-paint'></i>
+            </div>
+            <span class="link hide">Tercero A</span>
+          </a>
+        </li>
+        <li class="tooltip-element" data-tooltip="1">
+          <a href="#" data-active="1">
+            <div class="icon">
+              <i class='bx bx-book-bookmark'></i>
+              <i class='bx bxs-book-bookmark'></i>
+            </div>
+            <span class="link hide">Tercero B</span>
+          </a>
+        </li>
+        <li class="tooltip-element" data-tooltip="2">
+          <a href="#" data-active="2">
+            <div class="icon">
+              <i class='bx bx-planet'></i>
+              <i class='bx bxs-planet'></i>
+            </div>
+            <span class="link hide">Tercero C</span>
+          </a>
+        </li>
+        <li class="tooltip-element" data-tooltip="3">
+          <a href="#" data-active="3">
+            <div class="icon">
+              <i class='bx bx-leaf'></i>
+              <i class='bx bxs-leaf'></i>
+            </div>
+            <span class="link hide">Tercero D</span>
+          </a>
+        </li>
+        <li class="tooltip-element" data-tooltip="4">
+          <a href="#" data-active="4">
+            <div class="icon">
+              <i class='bx bx-landscape'></i>
+              <i class='bx bxs-landscape'></i>
+            </div>
+            <span class="link hide">Tercero E</span>
+          </a>
+        </li>
+          <div class="tooltip">
+            <span class="show">Tercero A</span>
+            <span>Tercero B</span>
+            <span>Tercero C</span>
+            <span>Tercero D</span>
+            <span>Tercero E</span>
+          </div>
+          </ul>
+
+          <h4 class="hide">Áreas Técnicas</h4>
+
+          <ul>
+              <li class="tooltip-element" data-tooltip="0">
+                <a href="#" data-active="5" onclick="toggleSubMenu(event, 'sub-menu-0')">
+                  <div class="icon">
+                    <i class='bx bx-network-chart'></i>
+                    <i class='bx bxs-network-chart'></i>
+                  </div>
+                  <span class="link hide">Informática</span>
+                  <i class='hide arrow bx bxs-chevron-right'></i>
+                </a>
+        
+                <ul id="sub-menu-0" class="sub-menu">
+                      <li><a href="#" onclick="showContent('infA4-table-container')"><span class="text">Cuarto : Informática A</span></a></li>
+                      <li><a href="#" onclick="showContent('infB4-table-container')"><span class="text">Cuarto : Informática B</span></a></li>
+                      <li><a href="#"><span class="text">Quinto : Informática</span></a></li>
+                      <li><a href="#"><span class="text">Sexto : Informática</span></a></li>
+                    </ul>
+                </li>
+
+          <li class="tooltip-element" data-tooltip="1">
+            <a href="#" data-active="6" onclick="toggleSubMenu(event, 'sub-menu-1')">
+                <div class="icon">
+                    <i class='bx bx-injection'></i>
+                    <i class='bx bxs-injection'></i>
+                </div>
+                <span class="option link hide">Enfermería</span>
+                <i class='hide arrow bx bxs-chevron-right'></i>
+            </a>
+
+            <ul id="sub-menu-1" class="sub-menu">
+                <li><a href="#" onclick="showContent('enfer4-table-container')"><span class="text">Cuarto : Enfermería</span></a></li>
+                <li><a href="#"><span class="text">Quinto : Enfermería</span></a></li>
+                <li><a href="#"><span class="text">Sexto : Enfermería</span></a></li>
+              </ul>
+          </li>
+
+              <li class="tooltip-element" data-tooltip="2">
+                <a href="#" data-active="7" onclick="toggleSubMenu(event, 'sub-menu-2')">
+                  <div class="icon">
+                    <i class='bx bx-pie-chart-alt-2'></i>
+                    <i class='bx bxs-pie-chart-alt-2'></i>
+                  </div>
+                  <span class="link hide">Gestión</span>
+                  <i class='hide arrow bx bxs-chevron-right'></i>
+                </a>
+
+                <ul id="sub-menu-2" class="sub-menu">
+                    <li><a href="#" onclick="showContent('gest4-table-container')"><span class="text">Cuarto : Gestión</span></a></li>
+                    <li><a href="#"><span class="text">Quinto : Gestión</span></a></li>
+                    <li><a href="#"><span class="text">Sexto : Gestión</span></a></li>
+                  </ul>
+              </li>
+
+              <li class="tooltip-element" data-tooltip="3">
+                <a href="#" data-active="8" onclick="toggleSubMenu(event, 'sub-menu-3')">
+                  <div class="icon">
+                    <i class='bx bx-purchase-tag-alt'></i>
+                    <i class='bx bxs-purchase-tag-alt'></i>
+                  </div>
+                  <span class="link hide">Mercadeo</span>
+                  <i class='hide arrow bx bxs-chevron-right'></i>
+                </a>
+
+                <ul id="sub-menu-3" class="sub-menu">
+                    <li><a href="#" onclick="showContent('merc4-table-container')"><span class="text">Cuarto : Mercadeo</span></a></li>
+                    <li><a href="#"><span class="text">Quinto : Mercadeo</span></a></li>
+                    <li><a href="#"><span class="text">Sexto : Mercadeo</span></a></li>
+                  </ul>
+              </li>
+
+              <li class="tooltip-element" data-tooltip="4">
+                <a href="#" data-active="9" onclick="toggleSubMenu(event, 'sub-menu-4')">
+                  <div class="icon">
+                    <i class='bx bx-shopping-bag'></i>
+                    <i class='bx bxs-shopping-bag'></i>
+                  </div>
+                  <span class="link hide">Modas</span>
+                  <i class='hide arrow bx bxs-chevron-right'></i>
+                </a>
+
+                <ul id="sub-menu-4" class="sub-menu">
+                    <li><a href="#" onclick="showContent('moda4-table-container')"><span class="text">Cuarto : Modas</span></a></li>
+                    <li><a href="#"><span class="text">Quinto : Modas</span></a></li>
+                    <li><a href="#"><span class="text">Sexto : Modas</span></a></li>
+                  </ul>
+              </li>
+
+              <li class="tooltip-element" data-tooltip="5">
+                <a href="#" data-active="10" onclick="toggleSubMenu(event, 'sub-menu-5')">
+                  <div class="icon">
+                    <i class='bx bx-hard-hat'></i>
+                    <i class='bx bxs-hard-hat'></i>
+                  </div>
+                  <span class="link hide">Ebanistería</span>
+                  <i class='hide arrow bx bxs-chevron-right'></i>
+                </a>
+
+                <ul id="sub-menu-5" class="sub-menu">
+                    <li><a href="#" onclick="showContent('eban4-table-container')"><span class="text">Cuarto : Ebanistería</span></a></li>
+                    <li><a href="#"><span class="text">Quinto : Ebanistería</span></a></li>
+                    <li><a href="#"><span class="text">Sexto : Ebanistería</span></a></li>
+                  </ul>
+              </li>
+
+        <div class="tooltip">
+          <span class="show">Informática</span>
+          <span>Enfermería</span>
+          <span>Gestión</span>
+          <span>Mercadeo</span>
+          <span>Modas</span>
+          <span>Ebanistería</span>
+        </div>
+      </ul>
+      </div>
+
+      <div class="advanced">
+      <h4 class="hide">Visualización Avanzada</h4>
+      </div>
+
+      <div class="checkbox">
+        <div class="check-btn"></div>
+        <input type="checkbox" id="click">
+        <label for="click" class="text hide"></label>
+      </div>
+
+    <div class="sidebar-footer">
+      <a href="#" class="account tooltip-element" data-tooltip="0">
+        <i class='bx bx-user'></i>
+      </a>
+      <div class="admin-user tooltip-element" data-tooltip="1">
+        <div class="admin-profile hide">
+          <img src="images/SimpleCrown.png" alt="">
+          <div class="admin-info">
+            <h3><span id="nombre"></span></h3>
+            <h5><span id="curso"></span></h5>
+          </div>
+        </div>
+        <a href="https://astroversed.github.io/ranking.com.form/" class="log-out">
+          <i class='bx bx-log-out-circle'></i>
+        </a>
+      </div>
+      <div class="tooltip">
+        <span class="show" id="tooltipUserName"></span>
+        <span>Cerrar Sesión</span>
+      </div>
+    </div>
+    </div>
+  </nav>
+
+  <main>
+    <div id="terceroA-table-container" style="display: none;">
+      <h1>Récord de Calificaciones : <span>Tercero A</span></h1>
+      <div class="search-table">
+          <i class='bx bx-search'></i>
+          <input type="search" class="searchNames" placeholder="Buscar Estudiantes ...">
+      </div>
+      <table class="dashboard-table">
+        <thead>
+          <tr>
+              <th> Número </th>
+              <th> Nombre </th>
+              <th> Curso </th>
+              <th> Resultados </th>
+              <th> Promedio </th>
+          </tr>
+      </thead>
+      <tbody id="tableBody">
+          <tr>
+              <td> 1 </td>
+              <td> <img src="images/WomanRouse.png" alt="">Yudelky Gomez</td>
+              <td> Tercero A</td>
+              <td>
+                  <p class="status Reprobado">Reprobado</p>
+              </td>
+              <td> <strong>50%</strong></td>
+          </tr>
+          <tr>
+              <td> 2 </td>
+              <td><img src="images/WomanRouse.png" alt=""> Marenys Alcantara </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>91%</strong> </td>
+          </tr>
+          <tr>
+              <td> 3</td>
+              <td><img src="images/WomanRouse.png" alt=""> Souynel De la Rosa</td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Bueno">Bueno</p>
+              </td>
+              <td> <strong>81%</strong> </td>
+          </tr>
+          <tr>
+              <td> 4</td>
+              <td><img src="images/ManSky.png" alt=""> Wilkin Guzman </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>100%</strong> </td>
+          </tr>
+          <tr>
+              <td> 5</td>
+              <td><img src="images/ManSky.png" alt=""> Adrian Pimentel </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Reprobado">Reprobado</p>
+              </td>
+              <td> <strong>60%</strong> </td>
+          </tr>
+          <tr>
+              <td> 6</td>
+              <td><img src="images/ManSky.png" alt=""> Willy Mariano </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>95%</strong> </td>
+          </tr>
+          <tr>
+              <td> 7</td>
+              <td><img src="images/ManSky.png" alt=""> Ezequiel Soriano </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Reprobado">Reprobado</p>
+              </td>
+              <td> <strong>50%</strong> </td>
+          </tr>
+          <tr>
+              <td> 8</td>
+              <td><img src="images/WomanRouse.png" alt=""> Canos Lopez</td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Bueno">Bueno</p>
+              </td>
+              <td> <strong>80%</strong> </td>
+          </tr>
+          <tr>
+          <tr>
+              <td> 9 </td>
+              <td><img src="images/ManSky.png" alt=""> Jhoan Aquino </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>89%</strong> </td>
+          </tr>
+          <tr>
+              <td> 10 </td>
+              <td><img src="images/ManSky.png" alt=""> Haiker Dominguez</td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>100%</strong> </td>
+          </tr>
+          <tr>
+              <td> 11</td>
+              <td><img src="images/ManSky.png" alt=""> Angelo Rodriguez </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Bueno">Bueno</p>
+              </td>
+              <td> <strong>80%</strong> </td>
+          </tr>
+          <tr>
+              <td> 12</td>
+              <td><img src="images/ManSky.png" alt=""> Breilyn Hernandez </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Reprobado">Reprobado</p>
+              </td>
+              <td> <strong>50%</strong> </td>
+          </tr>
+          <tr>
+              <td> 13</td>
+              <td><img src="images/WomanRouse.png" alt=""> Micher Cruz </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Bueno">Bueno</p>
+              </td>
+              <td> <strong>88%</strong> </td>
+          </tr>
+          <tr>
+              <td> 14</td>
+              <td><img src="images/WomanRouse.png" alt=""> Mariel Carcia </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>100%</strong> </td>
+          </tr>
+          <tr>
+              <td> 15</td>
+              <td><img src="images/ManSky.png" alt=""> Axel  </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>90%</strong> </td>
+          </tr>
+          <tr>
+              <td> 16</td>
+              <td><img src="images/WomanRouse.png" alt="">Lisandra </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Reprobado">Reprobado</p>
+              </td>
+              <td> <strong>60%</strong> </td>
+          </tr>
+          <tr>
+              <td> 17</td>
+              <td><img src="images/WomanRouse.png" alt=""> Ashley Martinez </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>90%</strong> </td>
+          </tr>
+          <tr>
+              <td> 18</td>
+              <td><img src="images/WomanRouse.png" alt=""> Bianny Vasquez </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Bueno">Bueno</p>
+              </td>
+              <td> <strong>80%</strong> </td>
+          </tr>
+          <tr>
+              <td> 19</td>
+              <td><img src="images/WomanRouse.png" alt=""> Sharleny Medina </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Reprobado">Reprobado</p>
+              </td>
+              <td> <strong>60%</strong> </td>
+          </tr>
+          <tr>
+              <td> 20</td>
+              <td><img src="images/WomanRouse.png"> Thamairis Vidal </td>
+              <td> Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>90%</strong> </td>
+          </tr>
+          <tr>
+              <td> 21</td>
+              <td><img src="images/WomanRouse.png" alt=""> Lorena Ramirez </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>90%</strong> </td>
+          </tr>
+          <tr>
+              <td> 22</td>
+              <td><img src="images/WomanRouse.png" alt=""> Crismeiry Romero </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Bueno">Bueno</p>
+              </td>
+              <td> <strong>84%</strong> </td>
+          </tr>
+          <tr>
+              <td> 23</td>
+              <td><img src="images/WomanRouse.png" alt=""> Lesly Pulino </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>90%</strong> </td>
+          </tr>
+          <tr>
+              <td> 24</td>
+              <td><img src="images/WomanRouse.png" alt=""> Yuliana Solano</td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>90%</strong> </td>
+          </tr>
+          <tr>
+              <td> 25</td>
+              <td><img src="images/WomanRouse.png" alt=""> Ana Encarnacion </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>90%</strong> </td>
+          </tr>
+          <tr>
+              <td> 26</td>
+              <td><img src="images/WomanRouse.png" alt=""> Yendrelis  </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>90%</strong> </td>
+          </tr>
+          <tr>
+              <td> 27</td>
+              <td><img src="images/WomanRouse.png" alt=""> Juliery Ferreras </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>90%</strong> </td>
+          </tr>
+          <tr>
+              <td> 28</td>
+              <td><img src="images/WomanRouse.png" alt=""> Achanty Nucello </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>90%</strong> </td>
+          </tr>
+          <tr>
+              <td> 29</td>
+              <td><img src="images/ManSky.png" alt=""> Jahaziel Rivas </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>90%</strong> </td>
+          </tr>
+          <tr>
+              <td> 30</td>
+              <td><img src="images/ManSky.png" alt=""> Cesar Peña </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>90%</strong> </td>
+          </tr>
+          <tr>
+              <td> 31</td>
+              <td><img src="images/WomanRouse.png" alt=""> Miguelina Ramirez </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Bueno">Bueno</p>
+              </td>
+              <td> <strong>99%</strong> </td>
+          </tr>
+          <tr>
+              <td> 32</td>
+              <td><img src="images/WomanRouse.png" alt=""> Raulenin Ozuna</td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>95%</strong> </td>
+          </tr>
+          <tr>
+              <td> 33</td>
+              <td><img src="images/WomanRouse.png" alt=""> Rosheel Cuevas </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>90%</strong> </td>
+          </tr>
+      <tr>
+              <td> 34</td>
+              <td><img src="images/ManSky.png" alt=""> Yoendi Duran </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Aprobado">Aprobado</p>
+              </td>
+              <td> <strong>90%</strong> </td>
+          </tr>
+          <tr>
+              <td> 35</td>
+              <td><img src="images/ManSky.png" alt=""> Hanner Blanco </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Reprobado">Reprobado</p>
+              </td>
+              <td> <strong>60%</strong> </td>
+          </tr>
+          <tr>
+              <td> 36</td>
+              <td><img src="images/WomanRouse.png"> Mia Perez </td>
+              <td>Tercero A</td>
+              <td>
+                  <p class="status Malo">Malo</p>
+              </td>
+              <td> <strong>79%</strong> </td>
+          </tr>
+          </tr>
+          </tbody>
+  </table>
+  </div>
+
+  <div id="terceroB-table-container" style="display: none;">
+    <h1>Récord de Calificaciones : <span>Tercero B</span></h1>
+    <div class="search-table">
+        <i class='bx bx-search'></i>
+        <input type="search" class="searchNames" placeholder="Buscar Estudiantes ...">
+    </div>
+<table class="dashboard-table">
+  <thead>
+    <tr>
+            <th> Número</th>
+            <th> Nombre</span></th>
+            <th> Curso</th>
+            <th> Resultados</th>
+            <th> Promedio</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody">
+        <tr>
+            <td> 1 </td>
+            <td> <img src="images/UnknownGhost.png" alt="">Jane Doe</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Anonimo">Anonimo</p>
+            </td>
+            <td> <strong>000%</strong></td>
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <td> <img src="images/ManSky.png" alt="">Wagner Enmanuel Brea Paulino</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>89%</strong></td>
+        </tr>
+        <tr>
+            <td> 3 </td>
+            <td><img src="images/WomanRouse.png">Joeslin Bueno Asencia</td>
+            <td>Tercero B</td> </td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>70%</strong> </td>
+        </tr>
+        <tr>
+            <td> 4</td>
+            <td><img src="images/ManSky.png" alt="">Johansel Alexander Cabral Peñado</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>81%</strong> </td>
+        </tr>
+        <tr>
+            <td> 5</td>
+            <td><img src="images/ManSky.png" alt="">Luis Miguel Castillo Brito</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>63%</strong> </td>
+        </tr>
+        <tr>
+            <td> 6</td>
+            <td><img src="images/WomanRouse.png" alt="">Genesis Contreras</td>
+            <td>Tercero B</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>50%</strong> </td>
+        </tr>
+        <tr>
+            <td> 7</td>
+            <td><img src="images/WomanRouse.png" alt="">Arianny De La Cruz Feliz</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>90%</strong> </td>
+        </tr>
+        <tr>
+            <td> 9</td>
+            <td><img src="images/ManSky.png" alt="">Carlos Junior De Leon Garcia</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>99%</strong> </td>
+        </tr>
+        <tr>
+            <td> 10</td>
+            <td><img src="images/ManSky.png" alt="">Lordi David Del Rosario</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>40%</strong> </td>
+        </tr>
+        <tr>
+            <td> 11</td>
+            <td><img src="images/WomanRouse.png" alt="">Darianny Warisleidy Encarnacion</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>74%</strong> </td>
+        </tr>
+        <tr>
+            <td> 12</td>
+            <td><img src="images/ManSky.png" alt="">Julio Alejandro Encarnacion Palmero</td>
+            <td>Tercero B</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>80%</strong> </td>
+        </tr>
+        <tr>
+            <td> 13</td>
+            <td><img src="images/WomanRouse.png" alt="">Karla Feliz Jumenez</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>95%</strong> </td>
+        </tr>
+        <tr>
+            <td> 14</td>
+            <td><img src="images/WomanRouse.png" alt="">Nashla Frias Calderon</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong> </td>
+        </tr>
+        <tr>
+            <td> 15</td>
+            <td><img src="images/WomanRouse.png" alt="">Risheilys Ester Garcia Feliz</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>33%</strong> </td>
+        </tr>
+                        <tr>
+            <td> 17</td>
+            <td><img src="images/ManSky.png" alt="">Daniel Nicolas Laro Reyes</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>85%</strong> </td>
+        </tr>
+        <tr>
+            <td> 18</td>
+            <td><img src="images/WomanRouse.png" alt="">Naihomi Yonairi Lora Mosquea</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>45%</strong> </td>
+        </tr>
+        <tr>
+            <td> 19</td>
+            <td><img src="images/WomanRouse.png" alt="">Stacy Gisselle Malena Perez</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>56%</strong> </td>
+        </tr>
+        <tr>
+            <td> 20</td>
+            <td><img src="images/ManSky.png" alt="">Yanmanuel Marinez Montero</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong> </td>
+        </tr>
+        <tr>
+            <td> 21</td>
+            <td><img src="images/ManSky.png" alt="">Hector Alexander Mercedes</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>98%</strong> </td>
+        </tr>
+        <tr>
+            <td> 22</td>
+            <td><img src="images/WomanRouse.png" alt="">Jeidi Oded Mieses</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>97%</strong> </td>
+        </tr>
+        <tr>
+            <td> 24</td>
+            <td><img src="images/WomanRouse.png" alt="">Selina Nicol Nuñez Montero</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>78%</strong> </td>
+        </tr>
+        <tr>
+            <td> 25</td>
+            <td><img src="images/WomanRouse.png" alt="">Freisi M. Nuñez</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>87%</strong> </td>
+        </tr>
+        <tr>
+            <td> 26</td>
+            <td><img src="images/WomanRouse.png" alt="">Crisbiel Paola Baez</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>81%</strong> </td>
+        </tr>
+        <tr>
+            <td> 27</td>
+            <td><img src="images/ManSky.png" alt="">Maijovane Paulino</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>68%</strong> </td>
+        </tr>
+        <tr>
+            <td> 28</td>
+            <td><img src="images/WomanRouse.png" alt="">Taony N. Pichardo H.</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>47%</strong> </td>
+        </tr>
+        <tr>
+            <td> 29</td>
+            <td><img src="images/ManSky.png" alt="">Jheinel Pimentel</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>85%</strong> </td>
+        </tr>
+        <tr>
+            <td> 30</td>
+            <td><img src="images/WomanRouse.png" alt="">Rina Helen Ramon Hernandez</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>92%</strong> </td>
+        </tr>
+        <tr>
+            <td> 31</td>
+            <td><img src="images/WomanRouse.png" alt="">Camila Odett Rivas Martinez</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>75%</strong> </td>
+        </tr>
+        <tr>
+            <td> 32</td>
+            <td><img src="images/WomanRouse.png" alt="">Crismaylin Sanchez Concepcion</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>77%</strong> </td>
+        </tr>
+        <tr>
+            <td> 33</td>
+            <td><img src="images/WomanRouse.png" alt="">Yail Sanchez De La Cruz</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>83%</strong> </td>
+        </tr>
+        <tr>
+            <td> 34</td>
+            <td><img src="images/WomanRouse.png" alt="">Ashley Maciel Sena Concepcion</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>89%</strong> </td>
+        </tr>
+        <tr>
+            <td> 35</td>
+            <td><img src="images/ManSky.png" alt="">Emmanuel Silvero</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Reprobado"> Reprobado                               
+                </p>
+            </td>
+            <td> <strong>58%</strong> </td>
+        </tr>
+        <tr>
+            <td> 36</td>
+            <td><img src="images/WomanRouse.png" alt="">Leyda Sosa</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>86%</strong> </td>
+        </tr>
+        <tr>
+            <td> 37</td>
+            <td><img src="images/WomanRouse.png" alt="">Narbelys Alt. Taveras Jimenez</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>99%</strong> </td>
+        </tr>
+        <tr>
+            <td> 38</td>
+            <td><img src="images/ManSky.png" alt="">Jose Manuel Breto</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong> </td>
+        </tr>
+        <tr>
+            <td> 39</td>
+            <td><img src="images/WomanRouse.png" alt="">Marielys Masiel Ureña Carbajal</td>
+            <td>Tercero B </td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>91%</strong> </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div id="terceroC-table-container" style="display: none;">
+    <h1>Récord de Calificaciones : <span>Tercero C</span></h1>
+    <div class="search-table">
+        <i class='bx bx-search'></i>
+        <input type="search" class="searchNames" placeholder="Buscar Estudiantes ...">
+    </div>
+<table class="dashboard-table">
+    <thead>
+        <tr>
+            <th> Número</th>
+            <th> Nombre</th>
+            <th> Curso</th>
+            <th> Resultados</th>
+            <th> Promedio</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> 1 </td>
+            <td> <img src="images/WomanRouse.png" alt="">Ambar Michelle Acosta</td>
+            <td> Tercero C</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong></td>
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <td><img src="images/WomanRouse.png" alt=""> Yailin Matos</td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>50%</strong> </td>
+        </tr>
+        <tr>
+            <td> 3</td>
+            <td><img src="images/UnknownGhost.png" alt=""> John Doe </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Anonimo">Anonimo</p>
+            </td>
+            <td> <strong>000%</strong> </td>
+        </tr>
+        <tr>
+            <td> 4</td>
+            <td><img src="images/UnknownGhost.png" alt="">Jane Doe </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Anonimo">Anonimo</p>
+            </td>
+            <td> <strong>000%</strong> </td>
+        </tr>
+        <tr>
+            <td> 5</td>
+            <td><img src="images/UnknownGhost.png" alt="">Jane Doe </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Anonimo">Anonimo</p>
+            </td>
+            <td> <strong>000%</strong> </td>
+        </tr>
+        <tr>
+            <td> 6</td>
+            <td><img src="images/UnknownGhost.png" alt="">Jane Doe </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Anonimo">Anonimo</p>
+            </td>
+            <td> <strong>000%</strong> </td>
+        </tr>
+        <tr>
+            <td> 7</td>
+            <td><img src="images/ManSky.png" alt=""> Joel Perez</td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Malo"> Malo</p>
+            </td>
+            <td> <strong>70%</strong> </td>
+        </tr>
+        <tr>
+            <td> 8</td>
+            <td><img src="images/WomanRouse.png" alt=""> Glenda Bried </td>
+            <td>Tercero C </td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>67%</strong> </td>
+        </tr>
+        <tr>
+            <td> 9</td>
+            <td><img src="images/WomanRouse.png" alt=""> Anaberys burgos</td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Reprobado"> Reprobado</p>
+            </td>
+            <td> <strong>59%</strong> </td>
+        </tr>
+        <tr>
+            <td> 10</td>
+            <td><img src="images/WomanRouse.png" alt=""> Isis Calletano</td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>92%</strong> </td>
+        </tr>
+        <tr>
+            <td> 11</td>
+            <td><img src="images/ManSky.png"> Natanael Valdez</td>
+            <td>Tercero C
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>61%</strong> </td>
+        </tr>
+        <tr>
+            <td> 12</td>
+            <td><img src="images/ManSky.png" alt=""> Lewis collado </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>55%</strong> </td>
+        </tr>
+        <tr>
+            <td> 13</td>
+            <td><img src="images/ManSky.png" alt=""> Jeramuel Contrera</td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+        <td> <strong>99%</strong> </td>
+    </tr>
+            <tr>
+                <td> 14</td>
+                <td><img src="images/ManSky.png" alt=""> Michael Corcino </td>
+                <td>Tercero C  </td>
+                <td>
+                    <p class="status Malo">Malo</p>
+                </td>
+            <td> <strong>66%</strong> </td>
+        </tr>
+        <td> 15</td>
+            <td><img src="images/ManSky.png" alt""> Jose Angel </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong> </td>
+        </tr>
+        <tr>
+            <td> 16</td>
+            <td><img src="images/WomanRouse.png" alt=""> Leiry De La Cruz</td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong> </td>
+        </tr>
+        <tr>
+            <td> 17</td>
+            <td><img src="images/WomanRouse.png" alt=""> Dioralin Franchesca </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>80%</strong> </td>
+        </tr>
+        <tr>
+            <td> 18</td>
+            <td><img src="images/WomanRouse.png" alt="">Larissa Santana</td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>53%</strong> </td>
+        </tr>
+        <tr>
+        <tr>
+            <td> 19</td>
+            <td><img src="images/ManSky.png" alt=""> Brad Burgos  </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>88%</strong> </td>
+        </tr>
+        <tr>
+            <td> 20</td>
+            <td><img src="images/ManSky.png" alt=""> Reimi </td>
+            <td>Tercero C </td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>66%</strong> </td>
+        </tr>
+        <tr>
+            <td> 21</td>
+            <td><img src="images/ManSky.png" alt=""> Yeral Gabriel </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>57%</strong> </td>
+        </tr>
+        <tr>
+            <td> 22</td>
+            <td><img src="images/ManSky.png" alt=""> Esmerlin Gonzalez </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>98%</strong> </td>
+        </tr>
+            <tr>
+                <td> 23</td>
+                <td><img src="images/ManSky.png" alt=""> Alberto Acosta </td>
+                <td>Tercero C</td>
+                <td>
+                    <p class="status Malo">Malo</p>
+                </td>
+            <td> <strong>62%</strong> </td>
+        </tr>
+        <tr>
+            <td> 24</td>
+            <td><img src="images/WomanRouse.png" alt=""> Evelin Andujar </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong> </td>
+        </tr>
+        <tr>
+            <td> 25</td>
+            <td><img src="images/WomanRouse.png" alt="">  Anyelina</td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Bueno">Reprobado </p>
+            </td> 
+            <td> <strong>69%</strong> </td>
+        </tr>
+        <tr>
+            <td> 26</td>
+            <td><img src="images/ManSky.png" alt=""> Rodolfo Montero</td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>52%</strong> </td>
+        </tr>
+        <tr>
+            <td> 27</td>
+            <td><img src="images/WomanRouse.png" alt="">Caroline Kamil  </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>94%</strong> </td>
+        </tr>
+        <tr>
+            <td> 28</td>
+            <td><img src="images/WomanRouse.png" alt=""> Leslie Patrocino</td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>53%</strong> </td>
+        </tr>
+        <tr>
+            <td> 29</td>
+            <td><img src="images/ManSky.png" alt=""> Gabriel Peralta</td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>84%</strong> </td>
+        </tr>
+        <tr>
+            <td> 30</td>
+            <td><img src="images/UnknownGhost.png" alt="">Jane Doe </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Anonimo">Anonimo</p>
+            </td>
+            <td> <strong>000%</strong> </td>
+        </tr>
+        <tr>
+            <td> 31</td>
+            <td><img src="images/WomanRouse.png" alt=""> Anny Pimentel </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>56%</strong> </td>
+        </tr>
+        <tr>
+            <td> 32</td>
+            <td><img src="images/WomanRouse.png" alt="">Margaret Lora </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>59%</strong> </td>
+        </tr>
+        <tr>
+            <td> 33</td>
+            <td><img src="images/WomanRouse.png" alt=""> Yorgelis Ceballo</td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>53%</strong> </td>
+        </tr>
+        <tr>
+            <td> 34</td>
+            <td><img src="images/WomanRouse.png" alt="">`Gissell Rodriguez </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>59%</strong> </td>
+        </tr>
+        <tr>
+            <td> 35</td>
+            <td><img src="images/WomanRouse.png" alt="">Yeimeris Rodrigue</td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>53%</strong> </td>
+        </tr>
+        <tr>
+            <td> 36</td>
+            <td><img src="images/WomanRouse.png" alt="">Dachelis Rosario  </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>85%</strong> </td>
+        </tr>
+        <tr>
+            <td> 37</td>
+            <td><img src="images/ManSky.png" alt="">Euris Sanchez </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>55%</strong> </td>
+        </tr>
+        <tr>
+            <td> 38</td>
+            <td><img src="images/ManSky.png" alt="">Luis Taveras </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>80%</strong> </td>
+        </tr>
+        <tr>
+            <td> 39</td>
+            <td><img src="images/UnknownGhost.png" alt="">Jane Doe  </td>
+            <td>Tercero C</td>
+            <td>
+                <p class="status Anonimo">Anonimo</p>
+            </td>
+            <td> <strong>000%</strong> </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div id="terceroD-table-container" style="display: none;">
+    <h1>Récord de Calificaciones : <span>Tercero D</span></h1>
+    <div class="search-table">
+        <i class='bx bx-search'></i>
+        <input type="search" class="searchNames" placeholder="Buscar Estudiantes ...">
+    </div>
+<table class="dashboard-table">
+    <thead>
+        <tr>
+            <th> Número </th>
+            <th> Nombre </th>
+            <th> Curso </th>
+            <th> Resultados </th>
+            <th> Promedio </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> 1 </td>
+            <td> <img src="images/WomanRouse.png" alt="">Crismely Delgado</td>
+            <td> Tercero D</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong></td>
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <td><img src="images/ManSky.png" alt=""> Hanser Amparo </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>60%</strong> </td>
+        </tr>
+        <tr>
+            <td> 3</td>
+            <td><img src="images/WomanRouse.png" alt=""> Dariana Rodriguez </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>81%</strong> </td>
+        </tr>
+        <tr>
+            <td> 4</td>
+            <td><img src="images/ManSky.png" alt=""> Yeremi Enmanuel </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>75%</strong> </td>
+        </tr>
+        <tr>
+            <td> 5</td>
+            <td><img src="images/ManSky.png" alt="">Alber Brito</td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>77%</strong> </td>
+        </tr>
+        <tr>
+            <td> 6</td>
+            <td><img src="images/WomanRouse.png" alt=""> Mirelis Zaya </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>55%</strong> </td>
+        </tr>
+        <tr>
+            <td> 7</td>
+            <td><img src="images/ManSky.png" alt=""> Marcelo Tejeda </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>45%</strong> </td>
+        </tr>
+        <tr>
+            <td> 8</td>
+            <td><img src="images/WomanRouse.png" alt=""> Yeisi Gonzales  </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>73%</strong> </td>
+        </tr>
+        <tr>
+            <td> 9</td>
+            <td><img src="images/WomanRouse.png" alt=""> Diana  Montilla </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>82%</strong> </td>
+        </tr>
+        <tr>
+            <td> 10</td>
+            <td><img src="images/ManSky.png" alt=""> Yosmeri Mejia </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>99%</strong> </td>
+        </tr>
+        <tr>
+            <td> 11</td>
+            <td><img src="images/WomanRouse.png" alt=""> Esther Amador </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>12%</strong> </td>
+        </tr>
+        <tr>
+            <td> 12</td>
+            <td><img src="images/WomanRouse.png" alt=""> Rosagel Volguez</td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>73%</strong> </td>
+        </tr>
+        <tr>
+            <td> 13</td>
+            <td><img src="images/ManSky.png" alt="">Jose Francisco </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>97%</strong> </td>
+        </tr><tr>
+            <td> 14</td>
+            <td><img src="images/ManSky.png" alt=""> Jose Lara </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>50%</strong> </td>
+        </tr>
+        <tr>
+            <td> 15</td>
+            <td><img src="images/ManSky.png" alt=""> Alex Estrella </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>85%</strong> </td>
+        </tr>
+        <tr>
+            <td> 16</td>
+            <td><img src="images/WomanRouse.png" alt=""> Vanessa Jhonson </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>80%</strong> </td>
+        </tr>
+        <tr>
+            <td> 17</td>
+            <td><img src="images/WomanRouse.png" alt=""> Joyci Jimenez </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>84%</strong> </td>
+        </tr>
+        <tr>
+            <td> 18</td>
+            <td><img src="images/WomanRouse.png" alt=""> Raisa Ramos </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>17%</strong> </td>
+        </tr>
+        <tr>
+            <td> 19</td>
+            <td><img src="images/ManSky.png" alt=""> Romel Nicolar </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>87%</strong> </td>
+        </tr>
+        <tr>
+            <td> 20</td>
+            <td><img src="images/ManSky.png" alt=""> Edual Arberto </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>32%</strong> </td>
+        </tr>
+        <tr>
+            <td> 21</td>
+            <td><img src="images/WomanRouse.png" alt=""> Eimy Peguero </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>97%</strong> </td>
+        </tr>
+        <tr>
+            <td> 22</td>
+            <td><img src="images/WomanRouse.png" alt=""> Ashley Encarnacion </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>36%</strong> </td>
+        </tr>
+        <tr>
+            <td> 23</td>
+            <td><img src="images/WomanRouse.png" alt=""> Nashla Michell </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>98%</strong> </td>
+        </tr>
+        <tr>
+            <td> 24</td>
+            <td><img src="images/ManSky.png" alt=""> Lian Lorezo </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>71%</strong> </td>
+        </tr>
+        <tr>
+            <td> 25</td>
+            <td><img src="images/WomanRouse.png" alt=""> Ashly Diaz </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>81%</strong> </td>
+        </tr>
+        <tr>
+            <td> 26</td>
+            <td><img src="images/WomanRouse.png" alt=""> Siarah Santos </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>23%</strong> </td>
+        </tr>
+        <tr>
+            <td> 27</td>
+            <td><img src="images/ManSky.png" alt=""> Eyden Burgos </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>91%</strong> </td>
+        </tr>
+        <tr>
+            <td> 28</td>
+            <td><img src="images/ManSky.png" alt=""> Justin Muñoz </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>76%</strong> </td>
+        </tr>
+        <tr>
+            <td> 29</td>
+            <td><img src="images/ManSky.png" alt=""> Angel Peña </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>73%</strong> </td>
+        </tr>
+        <tr>
+            <td> 30</td>
+            <td><img src="images/ManSky.png" alt=""> Frederick Peña </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>85%</strong> </td>
+        </tr>
+        <tr>
+            <td> 31</td>
+            <td><img src="images/ManSky.png" alt=""> Joandrick Manuel </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>32%</strong> </td>
+        </tr>
+        <tr>
+            <td> 32</td>
+            <td><img src="images/ManSky.png" alt=""> Juan Reynoso </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong> </td>
+        </tr>
+        <tr>
+            <td> 33</td>
+            <td><img src="images/ManSky.png" alt=""> Carlos Severino </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>89%</strong> </td>
+        </tr>
+        <tr>
+            <td> 34</td>
+            <td><img src="images/ManSky.png" alt=""> Jostin Cuello</td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>51%</strong> </td>
+        </tr>
+        <tr>
+            <td> 35</td>
+            <td><img src="images/ManSky.png" alt=""> William Beltre </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>88%</strong> </td>
+        </tr>  <tr>
+            <td> 36</td>
+            <td><img src="images/ManSky.png" alt=""> Magnaury Jimenes </td>
+            <td>Tercero D</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>91%</strong> </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div id="terceroE-table-container" style="display: none;">
+    <h1>Récord de Calificaciones : <span>Tercero E</span></h1>
+    <div class="search-table">
+        <i class='bx bx-search'></i>
+        <input type="search" class="searchNames" placeholder="Buscar Estudiantes ...">
+    </div>
+<table class="dashboard-table">
+    <thead>
+        <tr>
+            <th> Número </th>
+            <th> Nombre </th>
+            <th> Curso </th>
+            <th> Resultados </th>
+            <th> Promedio </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> 1 </td>
+            <td> <img src="images/WomanRouse.png" alt="">Shamil campusano</td>
+            <td> Tercero E</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong></td>
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <td><img src="images/WomanRouse.png" alt=""> Ashly Fernanda </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>60%</strong> </td>
+        </tr>
+        <tr>
+            <td> 3</td>
+            <td><img src="images/WomanRouse.png" alt=""> Dennys Polanco </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>81%</strong> </td>
+        </tr>
+        <tr>
+            <td> 4</td>
+            <td><img src="images/WomanRouse.png" alt=""> Smaylin Guzman </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>75%</strong> </td>
+        </tr>
+        <tr>
+            <td> 5</td>
+            <td><img src="images/WomanRouse.png" alt=""> Angelina Ferrera </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>77%</strong> </td>
+        </tr>
+        <tr>
+            <td> 6</td>
+            <td><img src="images/WomanRouse.png" alt=""> Angelina Almonte </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>55%</strong> </td>
+        </tr>
+        <tr>
+            <td> 7</td>
+            <td><img src="images/WomanRouse.png" alt=""> Samira Ferrer </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>45%</strong> </td>
+        </tr>
+        <tr>
+            <td> 8</td>
+            <td><img src="images/WomanRouse.png" alt=""> Alicia Muñoz </td>
+            <td>Tercero E </td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>73%</strong> </td>
+        </tr>
+        <tr>
+            <td> 9</td>
+            <td><img src="images/WomanRouse.png" alt=""> Camila Lora  </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>82%</strong> </td>
+        </tr>
+        <tr>
+            <td> 10</td>
+            <td><img src="images/ManSky.png" alt=""> Santiago Peguero </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>99%</strong> </td>
+        </tr>
+        <tr>
+            <td> 11</td>
+            <td><img src="images/WomanRouse.png" alt=""> Laileny Marillo </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>12%</strong> </td>
+        </tr>
+        <tr>
+            <td> 12</td>
+            <td><img src="images/WomanRouse.png" alt=""> Greicy Mariano</td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>73%</strong> </td>
+        </tr>
+        <tr>
+            <td> 13</td>
+            <td><img src="images/WomanRouse.png" alt=""> Alejandra de Jesus </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>97%</strong> </td>
+        </tr><tr>
+            <td> 14</td>
+            <td><img src="images/WomanRouse.png" alt=""> Ashley Martinez </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>50%</strong> </td>
+        </tr>
+        <tr>
+            <td> 15</td>
+            <td><img src="images/WomanRouse.png" alt=""> Anabell Binicio </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>29%</strong> </td>
+        </tr>
+        <tr>
+            <td> 16</td>
+            <td><img src="images/WomanRouse.png" alt=""> Vanessa Jhonson </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>80%</strong> </td>
+        </tr>
+        <tr>
+            <td> 17</td>
+            <td><img src="images/WomanRouse.png" alt=""> Joyci Jimenez </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>84%</strong> </td>
+        </tr>
+        <tr>
+            <td> 18</td>
+            <td><img src="images/WomanRouse.png" alt=""> Raisa Ramos </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>17%</strong> </td>
+        </tr>
+        <tr>
+            <td> 19</td>
+            <td><img src="images/ManSky.png" alt=""> Romel Nicolar </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>87%</strong> </td>
+        </tr>
+        <tr>
+            <td> 20</td>
+            <td><img src="images/ManSky.png" alt=""> edual arberto </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>32%</strong> </td>
+        </tr>
+        <tr>
+            <td> 21</td>
+            <td><img src="images/WomanRouse.png" alt=""> Eimy Peguero </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>97%</strong> </td>
+        </tr>
+        <tr>
+            <td> 22</td>
+            <td><img src="images/WomanRouse.png" alt=""> Ashley Encarnacion </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>36%</strong> </td>
+        </tr>
+        <tr>
+            <td> 23</td>
+            <td><img src="images/WomanRouse.png" alt=""> Nashla Michell </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>98%</strong> </td>
+        </tr>
+        <tr>
+            <td> 24</td>
+            <td><img src="images/ManSky.png" alt=""> Lian Lorezo </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>71%</strong> </td>
+        </tr>
+        <tr>
+            <td> 25</td>
+            <td><img src="images/WomanRouse.png" alt=""> Ashly Diaz </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>81%</strong> </td>
+        </tr>
+        <tr>
+            <td> 26</td>
+            <td><img src="images/WomanRouse.png" alt=""> Siarah Santos </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>23%</strong> </td>
+        </tr>
+        <tr>
+            <td> 27</td>
+            <td><img src="images/ManSky.png" alt=""> Eyden Burgos </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>91%</strong> </td>
+        </tr>
+        <tr>
+            <td> 28</td>
+            <td><img src="images/ManSky.png" alt=""> justin muñoz </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>76%</strong> </td>
+        </tr>
+        <tr>
+            <td> 29</td>
+            <td><img src="images/ManSky.png" alt=""> Angel Peña </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>73%</strong> </td>
+        </tr>
+        <tr>
+            <td> 30</td>
+            <td><img src="images/ManSky.png" alt=""> Frederick Peña </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>85%</strong> </td>
+        </tr>
+        <tr>
+            <td> 31</td>
+            <td><img src="images/ManSky.png" alt=""> Joandrick Manuel </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>32%</strong> </td>
+        </tr>
+        <tr>
+            <td> 32</td>
+            <td><img src="images/ManSky.png" alt=""> Juan Reynoso </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong> </td>
+        </tr>
+        <tr>
+            <td> 33</td>
+            <td><img src="images/ManSky.png" alt=""> Carlos Severino </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>89%</strong> </td>
+        </tr>
+        <tr>
+            <td> 34</td>
+            <td><img src="images/ManSky.png" alt=""> Jostin Cuello</td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>51%</strong> </td>
+        </tr>
+        <tr>
+            <td> 35</td>
+            <td><img src="images/ManSky.png" alt=""> William Beltre </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>88%</strong> </td>
+        </tr>  <tr>
+            <td> 36</td>
+            <td><img src="images/ManSky.png" alt=""> Magnaury Jimenes </td>
+            <td>Tercero E</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>91%</strong> </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div id="infA4-table-container" class="contenido" style="display: none;">
+    <h1>Récord de Calificaciones : <span>4to Informática A</span></h1>
+    <div class="search-table">
+        <i class='bx bx-search'></i>
+        <input type="search" class="searchNames" placeholder="Buscar Estudiantes ...">
+    </div>
+<table class="dashboard-table">
+    <thead>
+        <tr>
+            <th> Número </th>
+            <th> Nombre </th>
+            <th> Curso </th>
+            <th> Resultados </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> 1 </td>
+            <td> <img src="images/WomanRouse.png" alt="">Jhoanny Aybar</td>
+            <td> 4to Informática A</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <td><img src="images/ManSky.png" alt=""> Noel Baez </td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 3</td>
+            <td><img src="images/WomanRouse.png" alt=""> Gabriela Barrera </td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 4</td>
+            <td><img src="images/RanKING! - AnotherOne.png" alt=""> Felipe Batista </td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Work">Aprobado</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 5</td>
+            <td><img src="images/ManSky.png" alt=""> Emmanuel Bautista </td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 6</td>
+            <td><img src="images/ManSky.png" alt=""> Darwin Burgos </td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 7</td>
+            <td><img src="images/WomanRouse.png" alt=""> Samharia Calderon </td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 8</td>
+            <td><img src="images/WomanRouse.png" alt=""> Zoe Carmona </td>
+            <td>4to Informática A </td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 9</td>
+            <td><img src="images/ManSky.png" alt=""> Jesse Carvajal</td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Aprobado">Reprobado</p>
+            </td>
+        </tr>
+        <tr>
+
+            <td> 10 </td>
+            <td><img src="images/ManSky.png" alt=""> Cristofer Castillo</td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 11 </td>
+            <td><img src="images/ManSky.png" alt=""> Adrian Ceballo </td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 12 </td>
+            <td><img src="images/ManSky.png" alt=""> Yovanny Cespedes </td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Work">Aprobado</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 13</td>
+            <td><img src="images/ManSky.png" alt=""> Juan Carlos Contreras </td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 14</td>
+            <td><img src="images/ManSky.png" alt=""> Rafy Cruz </td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 15</td>
+            <td><img src="images/WomanRouse.png" alt=""> Yesmaily Encarnacion </td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>16</td>
+            <td><img src="images/RanKING! - Owner.png" alt=""> Gilbert Feliz</td>
+            <td>4to Informática A</td>
+            <td class="toggle-collapse">
+                <p class="status Absoluto">Ver Calificaciones <i class='arrow-collapse bx bxs-chevron-down'></i></p>
+            </td>
+        </tr>
+  <tr class="collapse">
+    <td colspan="4">
+      <div class="collapse-content">
+                <div class="content">
+
+                    <div class="collapse">
+            
+                        <ul class="insights">
+                            <li>
+                                <i class='bx bxs-plane-take-off'></i>
+                                <span class="info">
+                                    <h3>
+                                        Primer Período
+                                    </h3>
+                                    <p><span style="color: #1976D2; margin-right: -7px;">• Oct/Nov </span><span style="color: #757575; margin: 13px;">/ </span> <span style="color: #757575;">100% Completado</span></p>
+                                </span>
+                            </li>
+                            <li><i class='bx bxs-star-half'></i>
+                                <span class="info">
+                                    <h3>
+                                        Segundo Período
+                                    </h3>
+                                    <p><span style="color: #73388e; margin-right: -7px;">• Dic/Ene/Feb </span><span style="color: #757575; margin: 13px;">/ </span> <span style="color: #757575;">100% Completado</span></p>
+                                </span>
+                            </li>
+                            <li><i class='bx bx-timer'></i>
+                                <span class="info">
+                                    <h3>
+                                        Tercer Período
+                                    </h3>
+                                    <p><span style="color: #FBC02D; margin-right: -7px;">• Mar/Abr </span><span style="color: #757575; margin: 13px;">/ </span> <span style="color: #757575;">100% Completado</span></p>
+                                </span>
+                            </li>
+                            <li><i class='bx bx-stopwatch'></i>
+                                <span class="info">
+                                    <h3>
+                                        Cuarto Período
+                                    </h3>
+                                    <p><span style="color: #d3712f; margin-right: -7px;">• May/Jun </span><span style="color: #757575; margin: 13px;">/ </span> <span style="color: #757575;">85% Incompleto</span></p>
+                                </span>
+                            </li>
+                        </ul>
+
+                        <div class="blocking"></div>
+            
+                        <div class="scroll">
+                        <div class="bottom-data">
+                            <div class="orders">
+                                <div class="header">
+                                    <img src="images/RanKING - Vivid.png" style="width: 40px; height: 40px;" alt="">
+                                    <h3>Calificaciones de <span style="color: #3d5af1;">Gilbert Alexander Feliz Morillo</span>.</h3>
+                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Materias</th>
+                                            <th>Primer Período</th>
+                                            <th>Segundo Período</th>
+                                            <th>Tercer Período</th>
+                                            <th>Cuarto Período</th>
+                                            <th>C.F.</th>
+                                            <th>AA%</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <i class='bx bxs-book' style='color:rgb(202, 28, 28)' ></i>
+                                                <p>Lengua Española</p>
+                                            </td>
+                                            <td>98</td>
+                                            <td>100</td>
+                                            <td>100</td>
+                                            <td>100</td>
+                                            <td>100</td>
+                                            <td>100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class='bx bx-shape-triangle' style='color:rgb(19, 152, 204)'></i>
+                                                <p>Matemática</p>
+                                            </td>
+                                            <td>92</td>
+                                            <td>100</td>
+                                            <td>97</td>
+                                            <td>97</td>
+                                            <td>97</td>
+                                            <td>100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class='bx bxs-tree-alt' style='color:rgb(25, 175, 87)'></i>
+                                                <p>Ciencias de la Naturaleza</p>
+                                            </td>
+                                            <td>90</td>
+                                            <td>93</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class='bx bx-globe-alt' style='color:#990abd'></i>
+                                                <p>Ciencias Sociales</p>
+                                            </td>
+                                            <td>92</td>
+                                            <td>99</td>
+                                            <td>9</td>
+                                            <td>99</td>
+                                            <td>99</td>
+                                            <td>100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class='bx bxs-flag-alt' style='color:#e99e14'></i>
+                                                <p>Lengua Extranjera (Inglés)</p>
+                                            </td>
+                                            <td>96</td>
+                                            <td>95</td>
+                                            <td>95</td>
+                                            <td>95</td>
+                                            <td>95</td>
+                                            <td>100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class='bx bxl-dribbble' style='color:#e96214'></i>
+                                                <p>Educación Física</p>
+                                            </td>
+                                            <td>100</td>
+                                            <td>100</td>
+                                            <td>?</td>
+                                            <td>100</td>
+                                            <td>100</td>
+                                            <td>100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class='bx bxs-palette' style='color:#14e986'></i>
+                                                <p>Educación Artística</p>
+                                            </td>
+                                            <td>90</td>
+                                            <td>90</td>
+                                            <td>88</td>
+                                            <td>88</td>
+                                            <td>88</td>
+                                            <td>100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class='bx bxs-church' style='color:#0d0f6b' ></i>
+                                                <p>Formación Integral Humana y Religiosa</p>
+                                            </td>
+                                            <td>100</td>
+                                            <td>100</td>
+                                            <td>100</td>
+                                            <td>100</td>
+                                            <td>100</td>
+                                            <td>100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class='bx bxs-file-find' style='color:#3d5af1'></i>
+                                                <p>Ofimática</p>
+                                            </td>
+                                            <td>25</td>
+                                            <td>25</td>
+                                            <td>30</td>
+                                            <td>30</td>
+                                            <td>30</td>
+                                            <td>100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class='bx bxs-cog' style='color:#3d5af1'></i>
+                                                <p>Análisis y Diseño de Sistemas Informáticos</p>
+                                            </td>
+                                            <td>25</td>
+                                            <td>25</td>
+                                            <td>25</td>
+                                            <td>25</td>
+                                            <td>25</td>
+                                            <td>100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class='bx bxs-server' style='color:#3d5af1'></i>
+                                                <p>Diseño y Desarrollo de Base de Datos</p>
+                                            </td>
+                                            <td>25</td>
+                                            <td>25</td>
+                                            <td>25</td>
+                                            <td>25</td>
+                                            <td>25</td>
+                                            <td>100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class='bx bxs-cloud-upload' style='color:#3d5af1'></i>
+                                                <p>Diseño de Portales Web y Recursos Multimedia</p>
+                                            </td>
+                                            <td>24</td>
+                                            <td>25</td>
+                                            <td>25</td>
+                                            <td>25</td>
+                                            <td>25</td>
+                                            <td>100%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                          </div>
+            
+                        </div>
+            
+                    </div>
+            
+                </div>
+               </div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td> 17</td>
+            <td><img src="images/ManSky.png" alt=""> Angel Luis Frias </td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 18</td>
+            <td><img src="images/ManSky.png" alt=""> Ronny Garcia </td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 19</td>
+            <td><img src="images/ManSky.png" alt=""> Jose Gomez </td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 20</td>
+            <td><img src="images/ManSky.png" alt=""> Brayan Gonzales </td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 21</td>
+            <td><img src="images/WomanRouse.png" alt=""> Nicol Gonzales </td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 22</td>
+            <td><img src="images/ManSky.png" alt=""> Anferny Gonzales </td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 23</td>
+            <td><img src="images/ManSky.png" alt=""> Brayant Guzman </td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Work">Aprobado</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 24</td>
+            <td><img src="images/ManSky.png" alt=""> Brayan Mosquea </td>
+            <td>4to Informática A</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+        </tr>
+        <thead class="colors">
+            <tr>
+                <th class="Golden"> Número </th>
+                <th class="Ruby"> Nombre </th>
+                <th class="Golden"> Título </th>
+                <th class="Ruby"> Resultados </th>
+            </tr>
+        </thead>
+        <td> 25</td>
+            <td><img src="images/RanKING! - Marmolejos.png" class="better" alt=""> Yoelvi Marmolejos</td>
+            <td>&nbsp&nbsp&nbsp✶ Maestro</td>
+            <td>
+                <p class="status Inconmensurable"> Inconmensurable</p>
+            </td>
+        </tr>
+        <td> 26</td>
+        <td><img src="images/RanKING! - Felix.png" class="best" alt=""> Felix Alcantara</td>
+        <td>&nbsp&nbsp&nbsp✦ Maestro</td>
+        <td>
+            <p class="status Colosal"> Colosal</p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</div>
+
+<div id="infB4-table-container" class="contenido" style="display: none;">
+    <h1>Récord de Calificaciones : <span>4to Informática B</span></h1>
+    <div class="search-table">
+        <i class='bx bx-search'></i>
+        <input type="search" class="searchNames" placeholder="Buscar Estudiantes ...">
+    </div>
+<table class="dashboard-table">
+    <thead>
+        <tr>
+            <th> Número </th>
+            <th> Nombre </th>
+            <th> Curso </th>
+            <th> Resultados </th>
+            <th> Promedio </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> 1 </td>
+            <td> <img src="images/ManSky.png" alt="">Luis Angel</td>
+            <td> 4to Informática B</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong></td>
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <td><img src="images/WomanRouse.png" alt=""> Nashell Jimenez </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>60%</strong> </td>
+        </tr>
+        <tr>
+            <td> 3</td>
+            <td><img src="images/ManSky.png" alt=""> Isidro Stiven </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>82%</strong> </td>
+        </tr>
+        <tr>
+            <td> 4</td>
+            <td><img src="images/ManSky.png" alt=""> Oliver Mañon </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong> </td>
+        </tr>
+        <tr>
+            <td> 5</td>
+            <td><img src="images/ManSky.png" alt=""> Wally Marte </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>77%</strong> </td>
+        </tr>
+        <tr>
+            <td> 6</td>
+            <td><img src="images/ManSky.png" alt=""> Luis Eduardo </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>55%</strong> </td>
+        </tr>
+        <tr>
+            <td> 7</td>
+            <td><img src="images/ManSky.png" alt=""> Anderson Ariel </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>82%</strong> </td>
+        </tr>
+        <tr>
+            <td> 8</td>
+            <td><img src="images/ManSky.png" alt=""> David Montero </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>67%</strong> </td>
+        </tr>
+        <tr>
+            <td> 9</td>
+            <td><img src="images/ManSky.png" alt=""> Junior Francisco </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong> </td>
+        </tr>
+        <tr>
+            <td> 10</td>
+            <td><img src="images/ManSky.png" alt=""> Miguel Andres </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Reprobado ">Rebrobado</p>
+            </td>
+            <td> <strong>69%</strong> </td>
+        </tr>
+        <tr>
+            <td> 11</td>
+            <td><img src="images/ManSky.png" alt=""> Jeremy Alonso </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>73%</strong> </td>
+        </tr>
+        <tr>
+            <td> 12</td>
+            <td><img src="images/ManSky.png" alt=""> Wagnel Peralta</td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>89%</strong> </td>
+        </tr>
+        <tr>
+            <td> 13</td>
+            <td><img src="images/ManSky.png" alt=""> Samuel Perez</td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong> </td>
+        </tr><tr>
+            <td> 14</td>
+            <td><img src="images/WomanRouse.png" alt=""> Yuliana Perez </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>99%</strong> </td>
+        </tr>
+        <tr>
+            <td> 15</td>
+            <td><img src="images/ManSky.png" alt=""> Steven Pichardo </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Reprobado">Rebrobado</p>
+            </td>
+            <td> <strong>48%</strong> </td>
+        </tr>
+        <tr>
+            <td> 16</td>
+            <td><img src="images/ManSky.png" alt=""> Victor Polanco </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Malo ">Malo</p>
+            </td>
+            <td> <strong>75%</strong> </td>
+        </tr>
+        <tr>
+            <td> 17</td>
+            <td><img src="images/WomanRouse.png" alt=""> Kerianny Matos </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>80%</strong> </td>
+        </tr>
+        <tr>
+            <td> 18</td>
+            <td><img src="images/WomanRouse.png" alt=""> Camila Guerrero </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>98%</strong> </td>
+        </tr>
+        <tr>
+            <td> 19</td>
+            <td><img src="images/ManSky.png" alt=""> Albert Rosario </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>45%</strong> </td>
+        </tr>
+        <tr>
+            <td> 20</td>
+            <td><img src="images/WomanRouse.png" alt=""> Arlatte Ruiz </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>70%</strong> </td>
+        </tr>
+        <tr>
+            <td> 21</td>
+            <td><img src="images/ManSky.png" alt=""> Luis jesus tejeda </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Bueno ">Bueno</p>
+            </td>
+            <td> <strong>87%</strong> </td>
+        </tr>
+        <tr>
+            <td> 22</td>
+            <td><img src="images/ManSky.png" alt=""> Hanley Emil  </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong> </td>
+        </tr>
+        <tr>
+            <td> 23</td>
+            <td><img src="images/WomanRouse.png" alt=""> Nashla Michell </td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>80%</strong> </td>
+        </tr>
+        <tr>
+            <td> 24</td>
+            <td><img src="images/WomanRouse.png" alt="">Perla Vasquez</td>
+            <td>4to Informática B</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>50%</strong> </td>
+        </tr>
+        <tr>
+            <td> 25</td>
+            <td><img src="images/ManSky.png" alt=""> Biannel Josue </td>
+            <td>4to Informática B </td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>74%</strong> </td>
+        </tr>
+        <td> 26</td>
+        <td><img src="images/ManSky.png" alt=""> Jefrey </td>
+        <td>4to Informática B</td>
+        <td>
+            <p class="status Aprobado">Aprobado</p>
+        </td>
+        <td> <strong>98%</strong> </td>
+    </tr>
+    </tbody>
+</table>
+</div>
+
+<div id="enfer4-table-container" class="contenido" style="display: none;">
+    <h1>Récord de Calificaciones : <span>4to Enfermería</span></h1>
+    <div class="search-table">
+        <i class='bx bx-search'></i>
+        <input type="search" class="searchNames" placeholder="Buscar Estudiantes ...">
+    </div>
+<table class="dashboard-table">
+    <thead>
+        <tr>
+            <th> Número </th>
+            <th> Nombre </th>
+            <th> Curso </th>
+            <th> Resultados </th>
+            <th> Promedio </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> 1 </td>
+            <td> <img src="images/WomanRouse.png" alt="">Ashley Michelle Almancar</td>
+            <td> 4to Enfermería</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong></td>
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <td><img src="images/ManSky.png" alt=""> Angel Josue Arias</td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>50%</strong> </td>
+        </tr>
+        <tr>
+            <td> 3</td>
+            <td><img src="images/WomanRouse.png" alt="">  Jatna Castillo </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>80%</strong> </td>
+        </tr>
+        <tr>
+            <td> 4</td>
+            <td><img src="images/WomanRouse.png" alt="">Lahionel Chavez Ruiz </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>75%</strong> </td>
+        </tr>
+        <tr>
+            <td> 5</td>
+            <td><img src="images/WomanRouse.png" alt=""> Dahianny Cristal de Jesus</td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>87%</strong> </td>
+        </tr>
+        <tr>
+            <td> 6</td>
+            <td><img src="images/WomanRouse.png" alt=""> Andry de la Cruz</td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>55%</strong> </td>
+        </tr>
+        <tr>
+            <td> 7</td>
+            <td><img src="images/ManSky.png" alt=""> Engel Diaz</td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>75%</strong> </td>
+        </tr>
+        <tr>
+            <td> 8</td>
+            <td><img src="images/WomanRouse.png" alt=""> Yoseili Nathali Familia </td>
+            <td>4to Enfermería </td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>77%</strong> </td>
+        </tr>
+        <tr>
+            <td> 9</td>
+            <td><img src="images/WomanRouse.png" alt=""> Kendary Gonzalez</td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Reprobado"> Reprobado</p>
+            </td>
+            <td> <strong>59%</strong> </td>
+        </tr>
+        <tr>
+            <td> 10</td>
+            <td><img src="images/WomanRouse.png" alt=""> Lisbeth Grassal</td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>92%</strong> </td>
+        </tr>
+        <tr>
+            <td> 11</td>
+            <td><img src="images/WomanRouse.png" alt=""> Cynthia Hernandez </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>71%</strong> </td>
+        </tr>
+        <tr>
+            <td> 12</td>
+            <td><img src="images/WomanRouse.png" alt=""> Cielo Massiel Leyba </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>55%</strong> </td>
+        </tr>
+        <tr>
+            <td> 13</td>
+            <td><img src="images/WomanRouse.png" alt=""> Yafreilis Lopez</td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+        <td> <strong>99%</strong> </td>
+    </tr>
+            <tr>
+                <td> 14</td>
+                <td><img src="images/WomanRouse.png" alt=""> Ashley Mabel Lopez </td>
+                <td>4to Enfermería</td>
+                <td>
+                    <p class="status Malo">Malo</p>
+                </td>
+            <td> <strong>66%</strong> </td>
+        </tr>
+        <td> 15</td>
+            <td><img src="images/WomanRouse.png" alt""> Arlenis Manzanillo</td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong> </td>
+        </tr>
+        <tr>
+            <td> 16</td>
+            <td><img src="images/WomanRouse.png" alt=""> Demi Isabel Marte </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong> </td>
+        </tr>
+        <tr>
+            <td> 17</td>
+            <td><img src="images/WomanRouse.png" alt=""> Ashley Milagros Martinez </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>80%</strong> </td>
+        </tr>
+        <tr>
+            <td> 18</td>
+            <td><img src="images/WomanRouse.png" alt=""> Yohanny Lisbeth Minaya </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>53%</strong> </td>
+        </tr>
+        <tr>
+        <tr>
+            <td> 19</td>
+            <td><img src="images/WomanRouse.png" alt=""> Abril Paola Montero </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>89%</strong> </td>
+        </tr>
+        <tr>
+            <td> 20</td>
+            <td><img src="images/WomanRouse.png" alt=""> Yoannny Moreno </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>66%</strong> </td>
+        </tr>
+        <tr>
+            <td> 21</td>
+            <td><img src="images/WomanRouse.png" alt=""> Yerlici Ovalle </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>57%</strong> </td>
+        </tr>
+        <tr>
+            <td> 22</td>
+            <td><img src="images/WomanRouse.png" alt=""> Genara Abigail Diaz </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>98%</strong> </td>
+        </tr>
+            <tr>
+                <td> 23</td>
+                <td><img src="images/WomanRouse.png" alt=""> Ashley Peña </td>
+                <td>4to Enfermería</td>
+                <td>
+                    <p class="status Malo">Malo</p>
+                </td>
+            <td> <strong>72%</strong> </td>
+        </tr>
+        <tr>
+            <td> 24</td>
+            <td><img src="images/ManSky.png" alt=""> Angel Samuel  </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong> </td>
+        </tr>
+        <tr>
+            <td> 25</td>
+            <td><img src="images/WomanRouse.png" alt=""> Debora  Perez</td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Bueno">  Bueno </p>
+            </td> 
+            <td> <strong>89%</strong> </td>
+        </tr>
+        <tr>
+            <td> 26</td>
+            <td><img src="images/ManSky.png" alt=""> Yojansel Perez </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>52%</strong> </td>
+        </tr>
+        <tr>
+            <td> 27</td>
+            <td><img src="images/ManSky.png" alt="">Kevin Piña Caraballo  </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>94%</strong> </td>
+        </tr>
+        <tr>
+            <td> 28</td>
+            <td><img src="images/WomanRouse.png" alt=""> Paloma  Polanco</td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>53%</strong> </td>
+        </tr>
+        <tr>
+            <td> 29</td>
+            <td><img src="images/WomanRouse.png" alt=""> Ester Feliz </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>84%</strong> </td>
+        </tr>
+        <tr>
+            <td> 30</td>
+            <td><img src="images/WomanRouse.png" alt=""> Keity Reyes</td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>61%</strong> </td>
+        </tr>
+        <tr>
+            <td> 31</td>
+            <td><img src="images/ManSky.png" alt=""> Yunior Salvador </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>56%</strong> </td>
+        </tr>
+        <tr>
+            <td> 32</td>
+            <td><img src="images/WomanRouse.png" alt="">Samila Rodriguez </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>59%</strong> </td>
+        </tr>
+        <tr>
+            <td> 33</td>
+            <td><img src="images/WomanRouse.png" alt=""> Chris Rojas</td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>03%</strong> </td>
+        </tr>
+        <tr>
+            <td> 34</td>
+            <td><img src="images/WomanRouse.png" alt="">`Paola Rojas Estevez </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>99%</strong> </td>
+        </tr>
+        <tr>
+            <td> 35</td>
+            <td><img src="images/WomanRouse.png" alt="">Elaine Sanchez</td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>53%</strong> </td>
+        </tr>
+        <tr>
+            <td> 36</td>
+            <td><img src="images/WomanRouse.png" alt="">Emily Santana </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>75%</strong> </td>
+        </tr>
+        <tr>
+            <td> 37</td>
+            <td><img src="images/WomanRouse.png" alt="">Cristal Santiago Chavez </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>55%</strong> </td>
+        </tr>
+        <tr>
+            <td> 38</td>
+            <td><img src="images/WomanRouse.png" alt="">Yaisa Santos </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>80%</strong> </td>
+        </tr>
+        <tr>
+            <td> 39</td>
+            <td><img src="images/WomanRouse.png" alt="">Asdry Noiesi Tejada  </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>52%</strong> </td>
+        </tr>
+        <tr>
+            <td> 40</td>
+            <td><img src="images/WomanRouse.png" alt="">Steicy Vasquez </td>
+            <td>4to Enfermería</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>59%</strong> </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div id="gest4-table-container" class="contenido" style="display: none;">
+    <h1>Récord de Calificaciones : <span>4to Gestión</span></h1>
+    <div class="search-table">
+        <i class='bx bx-search'></i>
+        <input type="search" class="searchNames" placeholder="Buscar Estudiantes ...">
+    </div>
+<table class="dashboard-table">
+    <thead>
+        <tr>
+            <th> Número </th>
+            <th> Nombre </th>
+            <th> Curso </th>
+            <th> Resultados </th>
+            <th> Promedio </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> 1 </td>
+            <td> <img src="images/WomanRouse.png" alt="">Carmen Abreu</td>
+            <td> 4to Gestión </td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>65%</strong></td>
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <td><img src="images/WomanRouse.png" alt=""> Arianna Baez </td>
+            <td>4to Gestión</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong> </td>
+        </tr>
+        <tr>
+            <td> 3</td>
+            <td><img src="images/WomanRouse.png" alt=""> Aysha de la Cruz Reyes</td>
+            <td>4to Gestión</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>81%</strong> </td>
+        </tr>
+        <tr>
+            <td> 4</td>
+            <td><img src="images/WomanRouse.png" alt="">Elierys yasel de Leon</td>
+            <td>4to Gestión</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>80%</strong> </td>
+        </tr>
+        <tr>
+            <td> 5</td>
+            <td><img src="images/ManSky.png" alt=""> Wilmer Frias</td>
+            <td>4to Gestión</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>87%</strong> </td>
+        </tr>
+        <tr>
+            <td> 6</td>
+            <td><img src="images/WomanRouse.png" alt=""> Nashla Giron</td>
+            <td>4to Gestión</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>55%</strong> </td>
+        </tr>
+        <tr>
+            <td> 7</td>
+            <td><img src="images/ManSky.png" alt=""> Frandy Gomez </td>
+            <td>4to Gestión</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>88%</strong> </td>
+        </tr>
+        <tr>
+            <td> 8</td>
+            <td><img src="images/WomanRouse.png" alt=""> Leisy Gonzalez</td>
+            <td>4to Gestión </td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>93%</strong> </td>
+        </tr>
+        <tr>
+            <td> 9</td>
+            <td><img src="images/ManSky.png" alt="">Jose Manuel Guerrero </td>
+            <td>4to Gestión</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>66%</strong> </td>
+        </tr>
+        <tr>
+            <td> 10</td>
+            <td><img src="images/ManSky.png" alt=""> Keiron Trinidad</td>
+            <td>4to Gestión</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>49%</strong> </td>
+        </tr>
+        <tr>
+            <td> 11</td>
+            <td><img src="images/ManSky.png" alt=""> Neitan Heredia</td>
+            <td>4to Gestión</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>56%</strong> </td>
+        </tr>
+        <tr>
+            <td> 12</td>
+            <td><img src="images/WomanRouse.png" alt=""> Verialys Jeremias </td>
+            <td>4to Gestión</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>67%</strong> </td>
+        </tr>
+        <tr>
+            <td> 13</td>
+            <td><img src="images/ManSky.png" alt=""> Edgar Jimenez </td>
+            <td>4to Gestión</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>62%</strong> </td>
+            <tr>
+                <td> 14</td>
+                <td><img src="images/WomanRouse.png" alt=""> Scarlet Matos </td>
+                <td>4to Gestión</td>
+                <td>
+                    <p class="status Bueno">Bueno</p>
+                </td>
+            <td> <strong>78%</strong> </td>
+        </tr>
+    </tr>
+    <tr>
+        <td> 15</td>
+        <td><img src="images/WomanRouse.png" alt="">Samira Matos  </td>
+        <td>4to Gestión</td>
+        <td>
+            <p class="status Malo">Malo</p>
+        </td>
+        <td> <strong>66%</strong> </td>
+    </tr>
+</tr>
+<tr>
+    <td> 16</td>
+    <td><img src="images/ManSky.png" alt=""> Yanniel Sorianno</td>
+    <td>4to Gestión</td>
+    <td>
+        <p class="status Reprobado">Reprobado</p>
+    </td>
+    <td> <strong>56%</strong> </td>
+</tr>
+</tr>
+<tr>
+<td> 17</td>
+<td><img src="images/ManSky.png" alt=""> Jose Mendez</td>
+<td>4to Gestión</td>
+<td>
+    <p class="status Malo">Malo</p>
+</td>
+<td> <strong>67%</strong> </td>
+</tr>
+</tr>
+<tr>
+<td> 18</td>
+<td><img src="images/ManSky.png" alt=""> Gilbert Nicolas Mojica</td>
+<td>4to Gestión</td>
+<td>
+<p class="status Aprobado">Aprobado</p>
+</td>
+<td> <strong>92%</strong> </td>
+</tr>
+</tr>
+<tr>
+<td> 19</td>
+<td><img src="images/ManSky.png" alt=""> Jose Rafael Martinez </td>
+<td>4to Gestión</td>
+<td>
+<p class="status Aprobado">Aprobado</p>
+</td>
+<td> <strong>96%</strong> </td>
+</tr>
+</tr>
+<tr>
+<td> 20</td>
+<td><img src="images/ManSky.png" alt=""> Alexander Nuñez</td>
+<td>4to Gestión</td>
+<td>
+<p class="status Bueno">Bueno</p>
+</td>
+<td> <strong>80%</strong> </td>
+</tr>
+</tr>
+<tr>
+<td> 21</td>
+<td><img src="images/WomanRouse.png" alt="">Yuheiry Nuñez </td>
+<td>4to Gestión</td>
+<td>
+<p class="status Reprobado">Reprobado</p>
+</td>
+<td> <strong>51%</strong> </td>
+</tr>
+</tr>
+<tr>
+<td> 22</td>
+<td><img src="images/WomanRouse.png" alt=""> Maryluz Polanco</td>
+<td>4to Gestión</td>
+<td>
+<p class="status Bueno">Bueno</p>
+</td>
+<td> <strong>87%</strong> </td>
+</tr>
+</tr>
+<tr>
+<td> 23</td>
+<td><img src="images/ManSky.png" alt=""> Yandel Ramos</td>
+<td>4to Gestión</td>
+<td>
+<p class="status Malo">Malo</p>
+</td>
+<td> <strong>65%</strong></td>
+</tr>
+<tr>
+<td> 24</td>
+<td><img src="images/WomanRouse.png" alt=""> Dianna Reyes</td>
+<td>4to Gestión</td>
+<td>
+<p class="status Reprobado">Reprobado</p>
+</td>
+<td> <strong>55%</strong> </td>
+</tr>
+</tr>
+<tr>
+<td> 25</td>
+<td><img src="images/WomanRouse.png" alt=""> Karina Rivas</td>
+<td>4to Gestión</td>
+<td>
+<p class="status Aprobado">Aprobado</p>
+</td>
+<td> <strong>96%</strong> </td>
+</tr>
+</tr>
+<tr>
+<td> 26</td>
+<td><img src="images/WomanRouse.png" alt=""> Cristal Marie Ruiz</td>
+<td>4to Gestión</td>
+<td>
+<p class="status Aprobado">Aprobado</p>
+</td>
+<td> <strong>100%</strong> </td>
+</tr>
+</tr>
+<tr>
+<td> 27</td>
+<td><img src="images/WomanRouse.png" alt=""> Leslie Zoeth Sosa</td>
+<td>4to Gestión</td>
+<td>
+<p class="status Aprobado">Aprobado</p>
+</td>
+<td> <strong>100%</strong> </td>
+</tr>
+</tr>
+<tr>
+<td> 28</td>
+<td><img src="images/WomanRouse.png" alt=""> Isamar Deilina Valdez</td>
+<td>4to Gestión</td>
+<td>
+<p class="status Bueno">Bueno</p>
+</td>
+<td> <strong>80%</strong> </td>
+</tr>
+<tr>
+<td> 30</td>
+<td><img src="images/ManSky.png" alt=""> Yendri Zorrilla</td>
+<td>4to Gestión</td>
+<td>
+<p class="status Reprobado">Reprobado</p>
+</td>
+<td> <strong>59%</strong> </td>
+</tr>
+    </tbody>
+</table>
+</div>
+
+<div id="merc4-table-container" class="contenido" style="display: none;">
+    <h1>Récord de Calificaciones : <span>4to Mercadeo</span></h1>
+    <div class="search-table">
+        <i class='bx bx-search'></i>
+        <input type="search" class="searchNames" placeholder="Buscar Estudiantes ...">
+    </div>
+<table class="dashboard-table">
+    <thead>
+        <tr>
+            <th> Número </th>
+            <th> Nombre </th>
+            <th> Curso </th>
+            <th> Resultados </th>
+            <th> Promedio </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> 1 </td>
+            <td> <img src="images/ManSky.png" alt="">Alexis Cabral</td>
+            <td> 4to Mercadeo</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>60%</strong></td>
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <td><img src="images/WomanRouse.png" alt=""> Nayelis Cabral </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>93%</strong> </td>
+        </tr>
+        <tr>
+            <td> 3</td>
+            <td><img src="images/WomanRouse.png" alt=""> Ciara Mañon </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>59%</strong> </td>
+        </tr>
+        <tr>
+            <td> 4</td>
+            <td><img src="images/ManSky.png" alt=""> Jeremy Joshua </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>82%</strong> </td>
+        </tr>
+        <tr>
+            <td> 5</td>
+            <td><img src="images/WomanRouse.png" alt=""> Miyely Goris </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>74%</strong> </td>
+        </tr>
+        <tr>
+            <td> 6</td>
+            <td><img src="images/WomanRouse.png" alt=""> Wendy de la Cruz </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>85%</strong> </td>
+        </tr>
+        <tr>
+            <td> 7</td>
+            <td><img src="images/ManSky.png" alt=""> Elixander Emmanuel </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>76%</strong> </td>
+        </tr>
+        <tr>
+            <td> 8</td>
+            <td><img src="images/WomanRouse.png" alt=""> Damary Camila </td>
+            <td>4to Mercadeo </td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>84%</strong> </td>
+        </tr>
+        <tr>
+            <td> 9</td>
+            <td><img src="images/ManSky.png" alt=""> Junior Guzman</td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>38%</strong> </td>
+        </tr>
+        <tr>
+
+            <td> 10 </td>
+            <td><img src="images/ManSky.png" alt=""> Enyel Enrique </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>95%</strong> </td>
+        </tr>
+        <tr>
+            <td> 11 </td>
+            <td><img src="images/ManSky.png" alt=""> Byron Tejeda </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong> </td>
+        </tr>
+        <tr>
+            <td> 12 </td>
+            <td><img src="images/WomanRouse.png" alt=""> Claudibel Jimenez </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>-0%</strong> </td>
+        </tr>
+        <tr>
+            <td> 13</td>
+            <td><img src="images/WomanRouse.png" alt=""> Renaily Joseph </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>89%</strong> </td>
+        </tr>
+        <tr>
+            <td> 14</td>
+            <td><img src="images/ManSky.png" alt=""> Gherald Matos </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>87%</strong> </td>
+        </tr>
+        <tr>
+            <td> 15</td>
+            <td><img src="images/WomanRouse.png" alt=""> Ashley Moscoso </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>96%</strong> </td>
+        </tr>
+        <tr>
+            <td> 16</td>
+            <td><img src="images/WomanRouse.png" alt=""> Johanny Patrocinio </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>0%</strong> </td>
+        </tr>
+        <tr>
+            <td> 17</td>
+            <td><img src="images/WomanRouse.png" alt=""> Emely Peguero </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>86%</strong> </td>
+        </tr>
+        <tr>
+            <td> 18</td>
+            <td><img src="images/WomanRouse.png" alt=""> Gerline Aymei Oller </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>73%</strong> </td>
+        </tr>
+        <tr>
+            <td> 19</td>
+            <td><img src="images/WomanRouse.png" alt=""> Dashley Perez </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>82%</strong> </td>
+        </tr>
+        <tr>
+            <td> 20</td>
+            <td><img src="images/WomanRouse.png" alt=""> Lesly Perez </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>50%</strong> </td>
+        </tr>
+        <tr>
+            <td> 21</td>
+            <td><img src="images/WomanRouse.png" alt=""> Milagros Pinales </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>60%</strong> </td>
+        </tr>
+        <tr>
+            <td> 22</td>
+            <td><img src="images/WomanRouse.png" alt=""> Gabrielenna Mora </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Malo">Malo</p>
+            </td>
+            <td> <strong>75%</strong> </td>
+        </tr>
+        <tr>
+            <td> 23</td>
+            <td><img src="images/WomanRouse.png" alt=""> Greilyn Ramirez </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>100%</strong> </td>
+        </tr>
+        <tr>
+            <td> 24</td>
+            <td><img src="images/ManSky.png" alt=""> Gabriel Reyes </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>60%</strong> </td>
+        </tr>
+        <tr>
+            <td> 25</td>
+            <td><img src="images/WomanRouse.png" alt=""> Doralis Rodriguez </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>45%</strong> </td>
+        </tr>
+        <tr>
+            <td> 26</td>
+            <td><img src="images/ManSky.png" alt=""> Kevin Santiago </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Bueno">Bueno</p>
+            </td>
+            <td> <strong>81%</strong> </td>
+        </tr>
+        <tr>
+            <td> 27</td>
+            <td><img src="images/WomanRouse.png" alt=""> Anthely Santilme </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>96%</strong> </td>
+        </tr>
+        <tr>
+            <td> 28</td>
+            <td><img src="images/ManSky.png" alt=""> Ian Gadiel </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>60%</strong> </td>
+        </tr>
+        <tr>
+            <td> 29</td>
+            <td><img src="images/WomanRouse.png" alt=""> Maria Tejada </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Reprobado">Reprobado</p>
+            </td>
+            <td> <strong>56%</strong> </td>
+        </tr>
+        <tr>
+            <td> 30</td>
+            <td><img src="images/ManSky.png" alt=""> Haniel Ventura </td>
+            <td>4to Mercadeo</td>
+            <td>
+                <p class="status Aprobado">Aprobado</p>
+            </td>
+            <td> <strong>96%</strong> </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div id="moda4-table-container" class="contenido" style="display: none;">
+    <h1>Récord de Calificaciones : <span>4to Modas</span></h1>
+    <div class="search-table">
+        <i class='bx bx-search'></i>
+        <input type="search" class="searchNames" placeholder="Buscar Estudiantes ...">
+    </div>
+<table class="dashboard-table">
+                <thead>
+                    <tr>
+                        <th> Número </th>
+                        <th> Nombre </th>
+                        <th> Curso </th>
+                        <th> Resultados </th>
+                        <th> Promedio </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> 1 </td>
+                        <td> <img src="images/WomanRouse.png" alt="">Luz Mery </td>
+                        <td> 4to Modas </td>
+                        <td>
+                            <p class="status Aprobado">Aprobado</p>
+                        </td>
+                        <td> <strong>100%</strong></td>
+                    </tr>
+                    <tr>
+                        <td> 2 </td>
+                        <td><img src="images/WomanRouse.png"> Wilmaily </td>
+                        <td>4to Modas </td>
+                        <td>
+                            <p class="status Reprobado">Reprobado</p>
+                        </td>
+                        <td> <strong>60%</strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 3</td>
+                        <td><img src="images/WomanRouse.png" alt="">Marianni</td>
+                        <td>4to Modas </td>
+                        <td>
+                            <p class="status Bueno">Bueno</p>
+                        </td>
+                        <td> <strong>81%</strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 4</td>
+                        <td><img src="images/WomanRouse.png" alt="">Sanfraye</</td>
+                        <td>4to Modas </td>
+                        <td>
+                            <p class="status Malo">Malo</p>
+                        </td>
+                        <td> <strong>75%</strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 5</td>
+                        <td><img src="images/WomanRouse.png" alt="">Licelotte</</td>
+                        <td>4to Modas </td>
+                        <td>
+                            <p class="status Malo">Malo</p>
+                        </td>
+                        <td> <strong>75%</strong> </td>
+                    </tr>
+            
+                    </tr>
+                    <tr>
+                        <td> 6</td>
+                        <td><img src="images/WomanRouse.png" alt=""> Reyna </td>
+                        <td>4to Modas </td>
+                        <td>
+                            <p class="status Reprobado">Reprobado</p>
+                        </td>
+                        <td> <strong>55%</strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 7</td>
+                        <td><img src="images/WomanRouse.png" alt=""> Rosanjeles </td>
+                        <td>4to Modas </td>
+                        <td>
+                            <p class="status Aprobado">Aprobado</p>
+                        </td>
+                        <td> <strong>90%</strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 8</td>
+                        <td><img src="images/WomanRouse.png" alt="">Lidianny </td>
+                        <td>4to Modas  </td>
+                        <td>
+                            <p class="status Bueno">Bueno</p>
+                        </td>
+                        <td> <strong>35%</strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 9</td>
+                        <td><img src="images/ManSky.png" alt="">Jose luis  </td>
+                        <td>4to Modas  </td>
+                        <td>
+                            <p class="status Bueno">Bueno</p>
+                        </td>
+                        <td> <strong>35%</strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 10</td>
+                        <td><img src="images/WomanRouse.png" alt=""> Elizabeth </td>
+                        <td>4to Modas </td>
+                        <td>
+                            <p class="status Reprobado">Reprobado</p>
+                        </td>
+                        <td> <strong>50%</strong> </td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td><img src="images/WomanRouse.png" alt=""> Dafne </td>
+                        <td>4to Modas </td>
+                        <td>
+                            <p class="status Malo">Malo</p>
+                        </td>
+                        <td> <strong>74%</strong> </td>
+                    </tr>
+                     <tr>
+                        <td> 12</td>
+                        <td><img src="images/WomanRouse.png" alt=""> Katherine </td>
+                        <td>4to Modas </td>
+                        <td>
+                            <p class="status Reprobado">Reprobado</p>
+                        </td>
+                        <td> <strong>59%</strong> </td>
+                    </tr>
+                     <tr>
+                        <td> 13</td>
+                        <td><img src="images/WomanRouse.png" alt=""> Gabriela </td>
+                        <td>4to Modas </td>
+                        <td>
+                            <p class="status Aprobado">Aprobado</p>
+                        </td>
+                        <td> <strong>90%</strong> </td>
+                    </tr>
+                      <tr>
+                        <td> 14</td>
+                        <td><img src="images/WomanRouse.png" alt=""> Daniela </td>
+                        <td>4to Modas </td>
+                        <td>
+                            <p class="status Bueno">Bueno</p>
+                        </td>
+                        <td> <strong>80%</strong> </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <div id="eban4-table-container" class="contenido" style="display: none;">
+                <h1>Récord de Calificaciones : <span>4to Ebanistería</span></h1>
+                <div class="search-table">
+                    <i class='bx bx-search'></i>
+                    <input type="search" class="searchNames" placeholder="Buscar Estudiantes ...">
+                </div>
+            <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th> Número </th>
+                            <th> Nombre </th>
+                            <th> Curso </th>
+                            <th> Resultados </th>
+                            <th> Promedio </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> 1 </td>
+                            <td> <img src="images/ManSky.png" alt=""> Kendriel esequiel D la cruz </td>
+                            <td> 4to Ebanistería</td>
+                            <td>
+                                <p class="status Reprobado">Reprobado</p>
+                            </td>
+                            <td> <strong>50%</strong></td>
+                        </tr>
+                        <tr>
+                            <td> 2 </td>
+                            <td><img src="images/ManSky.png" alt=""> Emmannuel E custodio </td>
+                            <td>4to Ebanistería </td>
+                            <td>
+                                <p class="status Reprobado">Reprobado</p>
+                            </td>
+                            <td> <strong>60%</strong> </td>
+                        </tr>
+                        <tr>
+                            <td> 3</td>
+                            <td><img src="images/ManSky.png" alt=""> Francis de dios tejeda </td>
+                            <td>4to Ebanistería</td>
+                            <td>
+                                <p class="status Bueno">Bueno</p>
+                            </td>
+                            <td> <strong>81%</strong> </td>
+                        </tr>
+                        <tr>
+                            <td> 4</td>
+                            <td><img src="images/WomanRouse.png" alt=""> Dayana jesus gomez </td>
+                            <td>4to Ebanistería</td>
+                            <td>
+                                <p class="status Malo">Malo</p>
+                            </td>
+                            <td> <strong>75%</strong> </td>
+                        </tr>
+                        <tr>
+                            <td> 5</td>
+                            <td><img src="images/ManSky.png" alt=""> Osual de la cruz lluveres </td>
+                            <td>4to Ebanistería</td>
+                            <td>
+                                <p class="status Aprobado">Aprobado</p>
+                            </td>
+                            <td> <strong>99%</strong> </td>
+                        </tr>
+                        <tr>
+                            <td> 6</td>
+                            <td><img src="images/ManSky.png" alt=""> Julio elian encarnacion   </td>
+                            <td>4to Ebanistería</td>
+                            <td>
+                                <p class="status Bueno">Bueno</p>
+                            </td>
+                            <td> <strong>85%</strong> </td>
+                        </tr>
+                        <tr>
+                            <td> 7</td>
+                            <td><img src="images/ManSky.png" alt=""> Emmanuel jose faña reyes </td>
+                            <td>4to Ebanistería</td>
+                            <td>
+                                <p class="status Malo">Malo</p>
+                            </td>
+                            <td> <strong>76%</strong> </td>
+                        </tr>
+                        <tr>
+                            <td> 8</td>
+                            <td><img src="images/ManSky.png" alt=""> Antoni junior genao rivera </td>
+                            <td>4to Ebanistería </td>
+                            <td>
+                                <p class="status Malo">Malo</p>
+                            </td>
+                            <td> <strong>70%</strong> </td>
+                        </tr>
+                        <tr>
+                            <td> 9</td>
+                            <td><img src="images/ManSky.png" alt=""> Abner jose lara vidal  </td>
+                            <td>4to Ebanistería</td>
+                            <td>
+                                <p class="status Reprobado">Reprobado</p>
+                            </td>
+                            <td> <strong>60%</strong> </td>
+                        </tr>
+                        <tr>
+                            <td> 10</td>
+                            <td><img src="images/ManSky.png" alt=""> Jhon breiner martinez felix </td>
+                            <td>4to Ebanistería</td>
+                            <td>
+                                <p class="status Aprobado">Aprobado</p>
+                            </td>
+                            <td> <strong>90%</strong> </td>
+                        </tr>
+                        <tr>
+                            <td> 11</td>
+                            <td><img src="images/ManSky.png" alt=""> Noe valentin matias del rosario </td>
+                            <td>4to Ebanistería</td>
+                            <td>
+                                <p class="status Malo">Malo</p>
+                            </td>
+                            <td> <strong>77%</strong> </td>
+                        </tr>
+                        <tr>
+                            <td> 12</td>
+                            <td><img src="images/WomanRouse.png" alt=""> Crismeyri mendez  </td>
+                            <td>4to Ebanistería</td>
+                            <td>
+                                <p class="status Bueno">Bueno</p>
+                            </td>
+                            <td> <strong>70%</strong> </td>
+                        </tr>
+                        <tr>
+                            <td> 13</td>
+                            <td><img src="images/WomanRouse.png" alt=""> Viviana moreno belliard </td>
+                            <td>4to Ebanistería</td>
+                            <td>
+                                <p class="status Reprobado">Reprobado</p>
+                            </td>
+                            <td> <strong>70%</strong> </td>
+                         </tr>
+                         
+                        <tr>
+                            <td> 14</td>
+                            <td><img src="images/ManSky.png" alt=""> Joelvis manuel  </td>
+                            <td>4to Ebanistería</td>
+                            <td>
+                                <p class="status Reprobado">Reprobado</p>
+                            </td>
+                            <td> <strong>70%</strong> </td>
+                         </tr>
+    
+                            <tr>
+                            <td> 15</td>
+                            <td><img src="images/ManSky.png" alt=""> Luis fernandez peña ramirez </td>
+                            <td>4to Ebanistería</td>
+                            <td>
+                                <p class="status Aprobado">Aprobado</p>
+                            </td>
+                            <td> <strong>70%</strong> </td>
+                         </tr>
+                         
+                         <tr>
+                            <td> 16</td>
+                            <td><img src="images/ManSky.png" alt=""> Reilyn antonio ramirez diaz </td>
+                            <td>4to Ebanistería</td>
+                            <td>
+                                <p class="status Bueno">Bueno</p>
+                            </td>
+                            <td> <strong>70%</strong> </td>
+                         </tr>
+    
+                         <tr>
+                            <td> 17</td>
+                            <td><img src="images/WomanRouse.png" alt=""> Roleidy rosario mañana </td>
+                            <td>4to Ebanistería</td>
+                            <td>
+                                <p class="status Malo">Malo</p>
+                            </td>
+                            <td> <strong>70%</strong> </td>
+                         </tr>
+    
+                         <tr>
+                            <td> 18</td>
+                            <td><img src="images/WomanRouse.png" alt=""> Angelie cristal ruiz campos </td>
+                            <td>4to Ebanistería</td>
+                            <td>
+                                <p class="status Reprobado">Reprobado</p>
+                            </td>
+                            <td> <strong>60%</strong> </td>
+                         </tr>
+                    </tbody>
+                </table>
+            </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
